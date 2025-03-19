@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+
+        // Problema...
+        // const aluno1 = "Aline";
+        // const aluno2 = "Arthur";
+        // const aluno3 = "Bárbara";
+
+        // document.write(aluno1 + "<br>");
+        // document.write(aluno2 + "<br>");
+        // document.write(aluno3 + "<br>");
+
+        // Arrays
+        //    alunos = [1º nome, 2º nome, 3ºnome...]
+        //    alunos = [   0   ,     1   ,     2    ,       3   .... ]
+        let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi"];
+
+        // Acrescentar um nome ao final do array
+        // alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi", "Gabriel"];
+
+        alunos.push("Gabriel");
+        alunos.push("Henrique");
+
+        // Desenvolva uma forma de solicitar ao usuário os demais nomes que devem ser acrescentados à lista de alunos:
+        // - O programa deve perguntar ao usuário se ele deseja acrescentar um nome;
+        // - O programa deve adicionar o nome digitado pelo usuário ao final da lista "alunos";
+        // - O programa deve perguntar se o usuário quer digitar mais um nome. Caso não, ele deve exibir a lista de nomes completa na tela e finalizar o programa.
+
+        for (let indice = 0; indice < alunos.length; indice++) {
+            document.write(alunos[indice] + "<br>");
+        }
+    </script>
+</body>
+
+</html>
