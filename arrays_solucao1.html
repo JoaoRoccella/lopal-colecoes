@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
+    <br>
+    <output></output>
+
+    <script>
+        let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi"];
+
+        function imprimirAlunos() {
+
+            document.querySelector('output').innerHTML = '<h1>Lista de alunos</h1>';
+
+            for (let indice = 0; indice < alunos.length; indice++) {
+                document.querySelector('output').innerHTML += alunos[indice] + '<br>';
+            }
+
+        }
+
+        function adicionarAlunos() {
+
+            let novoAluno = prompt('Digite o nome do(a) aluno(a):');
+            alunos.push(novoAluno);
+
+            opcaoUsuario = confirm('Deseja Adicionar mais um aluno?');
+
+            while(opcaoUsuario) {
+                adicionarAlunos();
+            }
+
+            imprimirAlunos(); // chama a função sempre que alunos são adicionados
+
+        }
+
+        imprimirAlunos(); // chama a função só no carregamento da página
+
+
+        let frutas = ['maçã', 'banana'];
+        console.log(frutas);
+
+        frutas.push('manão');
+        console.log(frutas);
+        
+        frutas.pop();
+        console.log(frutas);
+        
+        // Problema 2
+        // Ops! O último nome foi digitado errado, e agora?
+        // Com base na solução anterior, desenvolva uma nova solução que permita remover o último nome digitado na lista de alunos.
+        // Dica: você pode utilizar um novo botão para executar uma nova função.
+    </script>
+</body>
+
+</html>
