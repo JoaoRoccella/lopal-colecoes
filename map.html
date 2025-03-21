@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    
+    <script>
+
+        const dataDeHoje = new Date().getDay();
+
+        const mapaDeDias = new Map([
+            [1, 'segunda-feira'],
+            [0, 'domingo'],
+            [3, 'quarta-feira'],
+            [5, 'sexta-feira'],
+            [2, 'terça-feira'],
+            [6, 'sábado']
+            [4, 'quinta-feira'],
+        ]);
+
+        document.write('<p>Hoje é ' + mapaDeDias.get(dataDeHoje) + '!</p>');
+        document.write(`<p>Hoje é ${mapaDeDias.get(dataDeHoje)}!</p>`); // Escrevendo com interpolação
+    </script>
+</body>
+</html>
