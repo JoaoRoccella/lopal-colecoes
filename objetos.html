@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+
+    <script>
+        // Problema
+        // Armazenando informações em variáveis individuais
+        let nome = "João Marcos";
+        let idade = 16;
+        let sesi = "Ipiranga";
+
+        // Exibindo as informações
+        console.log("Nome: " + nome);
+        console.log("Idade: " + idade);
+        console.log("SESI: " + sesi);
+
+        // Etapa 1
+        // Criando um objeto para armazenar as informações de um aluno
+        let aluno = {
+            nome: "João Marcos",
+            idade: 16,
+            sesi: "Ipiranga"
+        };
+
+        // Exibindo os valores dinamicamente
+        console.log("Nome: " + aluno.nome);
+        console.log("Idade: " + aluno.idade);
+        console.log("SESI: " + aluno.sesi);
+
+        // Etapa 2
+        // Criando um array de objetos
+        let alunos = [
+            { nome: "João", idade: 15, sesi: "Ipiranga" },
+            { nome: "Ana", idade: 16, sesi: "Vila das Marcês" },
+            { nome: "Carlos", idade: 16, sesi: "Tatuapé" }
+        ];
+
+        // Exibindo todos os alunos com um loop
+        for (let i = 0; i < alunos.length; i++) {
+            console.log(`${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}.`); // Comentar sobre interpolação
+        }
+
+    </script>
+</body>
+
+</html>
