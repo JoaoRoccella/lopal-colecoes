@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objects</title>
 </head>
+
 <body>
     <script>
         // Problema
@@ -43,14 +45,14 @@
         // Criando um array de objetos
 
         let alunos = [
-            {nome: 'Aline', idade: 15, sesi: 'Ipiranga', temPet: false},
-            {nome: 'Bárbara', idade: 16, sesi: 'Vila Leopoldina', temPet: true}
+            { nome: 'Aline', idade: 15, sesi: 'Ipiranga', temPet: false },
+            { nome: 'Bárbara', idade: 16, sesi: 'Vila Leopoldina', temPet: true }
         ];
 
         for (let i = 0; i < alunos.length; i++) {
             // document.write('<p>O(a) aluno(a) ' + alunos[i].nome + ' tem ' + alunos[i].idade + ' anos e é do SESI ' + alunos[i].sesi + '.</p>');
 
-            document.write(`<p>O(a) aluno(a) ${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}. ${alunos[i].temPet ? "Tem pet." : "Não tem pet."}</p>`);
+            document.write(`<p>O(a) aluno(a) ${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}. ${alunos[i].temPet ? "Tem pet." : "Não tem pet."}</p>`); // não obrigatório, mas recomendável
         }
 
         // Atividade: Objetos
@@ -60,4 +62,5 @@
 
     </script>
 </body>
+
 </html>
