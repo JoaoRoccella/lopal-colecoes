@@ -9,16 +9,14 @@
 
 <body>
     <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
+    <button type="button" onclick="removerUltimoAluno()">Remover Último Aluno</button>
     <br>
     <output></output>
     <script>
 
         let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi", "Gabriel", "Henrique"];
 
-        // Desenvolva uma forma de solicitar ao usuário os demais nomes que devem ser acrescentados à lista de alunos:
-        // - O programa deve perguntar ao usuário se ele deseja acrescentar um nome;
-        // - O programa deve adicionar o nome digitado pelo usuário ao final da lista "alunos";
-        // - O programa deve perguntar se o usuário quer digitar mais um nome. Caso não, ele deve exibir a lista de nomes completa na tela e finalizar o programa.
+        // Solução 1
 
         function imprimirAlunos() {
             
@@ -50,11 +48,16 @@
 
         imprimirAlunos();
 
-        // Problema 2
-        // Ops! O último nome foi digitado errado, e agora?
-        // Com base na solução anterior, desenvolva uma nova solução que permita 
-        // remover o último nome digitado na lista de alunos.
-        // Dica: você pode utilizar um novo botão para executar uma nova função.
+        // Solução 2
+
+        function removerUltimoAluno() {
+            
+            alunos.pop();
+
+            imprimirAlunos();
+
+            return;
+        }
 
     </script>
 </body>
