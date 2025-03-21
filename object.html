@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // Problema
+        // Armazenar diversos tipos de informação de cada aluno
+
+        // let nome1 = 'Aline';
+        // let idade1 = 15;
+        // let sesi1 = 'Ipiranga';
+        // let temPet1 = true;
+
+        // let nome2 = 'Bárbara';
+        // let idade2 = 16;
+        // let sesi2 = 'Vila Leopoldina';
+        // let temPet2 = true;
+
+        // document.write('Nome 1: ' + nome1);
+        // document.write('Idade: ' + idade1);
+        // ... ad infinitum
+
+        // Usando um objeto para um aluno
+        let aluno = {
+            nome: 'Aline',
+            idade: 15,
+            sesi: 'Ipiranga',
+            temPet: true
+        }
+
+        // document.write(aluno); // não imprime os atributos por padrão
+        console.log(aluno);
+
+        document.write('Nome: ' + aluno.nome + '<br>');
+        document.write('Idade: ' + aluno.idade + '<br>');
+        document.write('SESI: ' + aluno.sesi + '<br>');
+        document.write('Tem pet? ' + aluno.temPet + '<br>');
+
+        // Criando um array de objetos
+
+        let alunos = [
+            {nome: 'Aline', idade: 15, sesi: 'Ipiranga', temPet: false},
+            {nome: 'Bárbara', idade: 16, sesi: 'Vila Leopoldina', temPet: true}
+        ];
+
+        for (let i = 0; i < alunos.length; i++) {
+            // document.write('<p>O(a) aluno(a) ' + alunos[i].nome + ' tem ' + alunos[i].idade + ' anos e é do SESI ' + alunos[i].sesi + '.</p>');
+
+            document.write(`<p>O(a) aluno(a) ${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}. ${alunos[i].temPet ? "Tem pet." : "Não tem pet."}</p>`);
+        }
+
+        // Atividade: Objetos
+        // Crie um programa que solicite ao usuário os dados dos alunos (nome, idade, sesi e se possui pet ou não). O programa deve perguntar ao usuário se ele deseja continuar cadastrando alunos. Os dados dos alunos devem ser organizados em um array ou mapa de objetos como na demonstração (você pode começar com um array vazio, sem alunos cadastrados). Utilize um botão para executar a ação de cadastrar alunos. Essa ação deve ser executada mais de uma vez para acrescentar outros alunos, se o usuário desejar. O usuário deve ser capaz de remover os dados so último aluno cadastrado, se desejar. Utilize uma tag <output> para exibir os dados cadastrados.
+
+
+
+    </script>
+</body>
+</html>
