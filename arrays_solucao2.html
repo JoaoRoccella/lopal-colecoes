@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
+    <button type="button" onclick="removerUltimoAluno()">Remover Último Aluno</button>
+    <br>
+    <output></output>
+
+    <script>
+        let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi"];
+
+        function imprimirAlunos() {
+
+            document.querySelector('output').innerHTML = '<h1>Lista de alunos</h1>';
+
+            for (let indice = 0; indice < alunos.length; indice++) {
+                document.querySelector('output').innerHTML += alunos[indice] + '<br>';
+            }
+
+        }
+
+        function adicionarAlunos() {
+
+            let novoAluno = prompt('Digite o nome do(a) aluno(a):');
+            alunos.push(novoAluno);
+
+            opcaoUsuario = confirm('Deseja Adicionar mais um aluno?');
+
+            while(opcaoUsuario) {
+                adicionarAlunos();
+            }
+
+            imprimirAlunos(); // chama a função sempre que alunos são adicionados
+
+        }
+
+        function removerUltimoAluno() {
+
+            if (alunos.length > 0) {
+
+                alunos.pop();
+    
+                imprimirAlunos();
+                
+            } else {
+                alert('Não há mais nenhum aluno na lista.');
+            }
+
+        }
+
+        imprimirAlunos(); // chama a função só no carregamento da página
+
+    </script>
+</body>
+
+</html>
