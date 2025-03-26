@@ -14,21 +14,37 @@
     <output></output>
 
     <script>
-        let alunos = ["Aline", "Arthur", "Bárbara", "Bruna Luise", "Bruna Torres", "Bruna Velôso", "Cauã", "Daniel", "Davi"];
+        let alunos = [];
 
         function imprimirAlunos() {
 
-            document.querySelector('output').innerHTML = '<h1>Lista de alunos</h1>';
+            const output = document.querySelector('output');
 
-            for (let indice = 0; indice < alunos.length; indice++) {
-                document.querySelector('output').innerHTML += alunos[indice] + '<br>';
+            output.innerHTML = '<h1>Lista de alunos</h1>';
+
+            for (let i = 0; i < alunos.length; i++) {
+
+                output.innerHTML += `
+                <p>
+                    Nome: ${alunos[i].nome}<br>
+                    Idade: ${alunos[i].idade}<br>
+                    SESI: ${alunos[i].sesi}<br>
+                    Tem pet? ${alunos[i].temPet ? "Sim" : "Não"}
+                </p>
+                `;
             }
 
         }
 
         function adicionarAlunos() {
 
-            let novoAluno = prompt('Digite o nome do(a) aluno(a):');
+            let novoAluno = {
+                nome: prompt('Digite o NOME do(a) aluno(a):'),
+                idade: parseInt(prompt('Digite a IDADE do(a) aluno(a):')),
+                sesi: prompt('Digite o SESI do(a) aluno(a):'),
+                temPet: confirm('O(a) aluno(a) tem pet?')
+            };
+
             alunos.push(novoAluno);
 
             opcaoUsuario = confirm('Deseja Adicionar mais um aluno?');
