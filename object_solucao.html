@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
+    <button type="button" onclick="removerUltimoAluno()">Remover Último Aluno</button>
+    <br>
+    <output></output>
+
+    <script>
+        let alunos = [];
+
+        function imprimirAlunos() {
+
+            const output = document.querySelector('output');
+            output.innerHTML = '<h1>Lista de alunos</h1>';
+
+            for (let indice = 0; indice < alunos.length; indice++) {
+                output.innerHTML += `
+                    <p>
+                        Aluno nº ${indice + 1}<br>
+                        Nome: ${alunos[indice].nome}<br>
+                        Idade: ${alunos[indice].idade}<br>
+                        SESI: ${alunos[indice].sesi}<br>
+                        Tem pet? ${alunos[indice].temPet ? "Sim" : "Não"}
+                    </p>
+                `;
+            }
+
+        }
+
+        function adicionarAlunos() {
+
+            let novoAluno = {
+                nome: prompt('Digite o nome:'),
+                idade: parseInt(prompt('Digite a idade:')),
+                sesi: prompt('Digite o SESI:'),
+                temPet: confirm('Tem pet?')
+            };
+
+            alunos.push(novoAluno);
+
+            opcaoUsuario = confirm('Deseja Adicionar mais um aluno?');
+
+            while (opcaoUsuario) {
+                adicionarAlunos();
+            }
+
+            imprimirAlunos(); // imprime sempre que alunos são adicionados
+
+        }
+
+        function removerUltimoAluno() {
+
+            if (alunos.length > 0) {
+
+                alunos.pop();
+
+                imprimirAlunos(); // imprime sempre que um aluno é removido
+
+            } else {
+
+                alert('Não há mais nenhum aluno na lista.');
+            }
+
+        }
+
+        imprimirAlunos(); // imprime no carregamento da página
+
+    </script>
+</body>
+
+</html>
